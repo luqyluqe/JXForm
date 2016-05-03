@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'JXForm_Example', :exclusive => true do
+  pod 'JXForm', :path => '../'
+end
+
+target 'JXForm_Tests', :exclusive => true do
+  pod 'JXForm', :path => '../'
+
+  
+end
