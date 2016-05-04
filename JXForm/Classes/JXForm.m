@@ -27,13 +27,13 @@
     
     CGPoint formOrigin=[self getFormOriginWithViewOrigin:self.bounds.origin];
     CGPoint cellOrigin=formOrigin;
-    for (int i=-1; i<[self.delegate numberOfRowsInForm:self]-1; i++) {
-        if (i>-1) {
-            cellOrigin.y+=[self.delegate form:self heightForRow:i];
+    for (int i=0; i<[self.delegate numberOfRowsInForm:self]; i++) {
+        if (i>0) {
+            cellOrigin.y+=[self.delegate form:self heightForRow:i-1];
         }
-        for (int j=-1; j<[self.delegate numberOfColumnsInForm:self]-1; j++) {
-            if (j>-1) {
-                cellOrigin.x+=[self.delegate form:self widthForColumn:j];
+        for (int j=0; j<[self.delegate numberOfColumnsInForm:self]; j++) {
+            if (j>0) {
+                cellOrigin.x+=[self.delegate form:self widthForColumn:j-1];
             }
             UIView* contentView=[self.dataSource form:self contentViewForRow:i column:j];
             CGRect frame=contentView.frame;
@@ -52,7 +52,7 @@
     if(![self.delegate respondsToSelector:@selector(form:heightForRow:)]) return;
     if(![self.delegate respondsToSelector:@selector(form:widthForColumn:)]) return;
     
-    NSInteger rowCount=[self.delegate numberOfColumnsInForm:self];
+    NSInteger rowCount=[self.delegate numberOfRowsInForm:self];
     NSInteger columnCount=[self.delegate numberOfColumnsInForm:self];
     CGFloat height=0;
     CGFloat width=0;
