@@ -1,0 +1,14 @@
+PODS:
+  - JXForm (0.1.0)
+
+DEPENDENCIES:
+  - JXForm (from `../`)
+
+EXTERNAL SOURCES:
+  JXForm:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JXForm: ebbfcd8ff06246315c74bd05727664aa2cfee8ab
+
+COCOAPODS: 0.39.0

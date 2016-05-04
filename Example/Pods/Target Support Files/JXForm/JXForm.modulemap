@@ -1,0 +1,6 @@
+framework module JXForm {
+  umbrella header "JXForm-umbrella.h"
+
+  export *
+  module * { export * }
+}

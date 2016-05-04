@@ -21,6 +21,10 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		A985A9791CD99440007661DC /* JXForm.m in Sources */ = {isa = PBXBuildFile; fileRef = A985A96D1CD99440007661DC /* JXForm.m */; };
+		A985A97A1CD99440007661DC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A985A9701CD99440007661DC /* Info.plist */; };
+		A985A97B1CD99440007661DC /* JXForm.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A985A9721CD99440007661DC /* JXForm.xcconfig */; };
+		A985A97C1CD99440007661DC /* JXForm-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A985A9731CD99440007661DC /* JXForm-dummy.m */; };
 		DE7F39B7BD7729CFF9B3F699 /* Pods_JXForm_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CA0827E92C8014DD7FFF9C6 /* Pods_JXForm_Example.framework */; };
 		EC7239241B9069360E444815 /* Pods_JXForm_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973A8BC6A46734CD1A83F0B9 /* Pods_JXForm_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +66,14 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8CA0827E92C8014DD7FFF9C6 /* Pods_JXForm_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JXForm_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		973A8BC6A46734CD1A83F0B9 /* Pods_JXForm_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JXForm_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A985A96C1CD99440007661DC /* JXForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXForm.h; sourceTree = "<group>"; };
+		A985A96D1CD99440007661DC /* JXForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXForm.m; sourceTree = "<group>"; };
+		A985A9701CD99440007661DC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A985A9711CD99440007661DC /* JXForm.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = JXForm.modulemap; sourceTree = "<group>"; };
+		A985A9721CD99440007661DC /* JXForm.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = JXForm.xcconfig; sourceTree = "<group>"; };
+		A985A9731CD99440007661DC /* JXForm-dummy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JXForm-dummy.m"; sourceTree = "<group>"; };
+		A985A9741CD99440007661DC /* JXForm-prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JXForm-prefix.pch"; sourceTree = "<group>"; };
+		A985A9751CD99440007661DC /* JXForm-umbrella.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JXForm-umbrella.h"; sourceTree = "<group>"; };
 		C61F609BB2DFEA8B6C3C9E73 /* Pods-JXForm_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JXForm_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JXForm_Example/Pods-JXForm_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E0228A1075D564AD2C0C167B /* JXForm.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JXForm.podspec; path = ../JXForm.podspec; sourceTree = "<group>"; };
 		F2FE1ECAE23FF9FA41C0AA8C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -96,6 +108,7 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
+				A985A9781CD99440007661DC /* Development Pods */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for JXForm */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -180,6 +193,56 @@
 				2FDD2F477FA761D09F6EBD1F /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		A985A96E1CD99440007661DC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A985A96C1CD99440007661DC /* JXForm.h */,
+				A985A96D1CD99440007661DC /* JXForm.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A985A96F1CD99440007661DC /* JXForm */ = {
+			isa = PBXGroup;
+			children = (
+				A985A96E1CD99440007661DC /* Classes */,
+			);
+			path = JXForm;
+			sourceTree = "<group>";
+		};
+		A985A9761CD99440007661DC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A985A9701CD99440007661DC /* Info.plist */,
+				A985A9711CD99440007661DC /* JXForm.modulemap */,
+				A985A9721CD99440007661DC /* JXForm.xcconfig */,
+				A985A9731CD99440007661DC /* JXForm-dummy.m */,
+				A985A9741CD99440007661DC /* JXForm-prefix.pch */,
+				A985A9751CD99440007661DC /* JXForm-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/JXForm";
+			sourceTree = "<group>";
+		};
+		A985A9771CD99440007661DC /* JXForm */ = {
+			isa = PBXGroup;
+			children = (
+				A985A96F1CD99440007661DC /* JXForm */,
+				A985A9761CD99440007661DC /* Support Files */,
+			);
+			name = JXForm;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		A985A9781CD99440007661DC /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A985A9771CD99440007661DC /* JXForm */,
+			);
+			name = "Development Pods";
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		C98A1869381B51001BDBB6B1 /* Pods */ = {
@@ -276,9 +339,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A985A97A1CD99440007661DC /* Info.plist in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+				A985A97B1CD99440007661DC /* JXForm.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,7 +456,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* JXAppDelegate.m in Sources */,
+				A985A9791CD99440007661DC /* JXForm.m in Sources */,
 				6003F5A7195388D20070C39A /* JXViewController.m in Sources */,
+				A985A97C1CD99440007661DC /* JXForm-dummy.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

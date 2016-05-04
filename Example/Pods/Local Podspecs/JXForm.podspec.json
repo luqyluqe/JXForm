@@ -1,0 +1,19 @@
+{
+  "name": "JXForm",
+  "version": "0.1.0",
+  "summary": "A short description of JXForm.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/JXForm",
+  "license": "MIT",
+  "authors": {
+    "luqyluqe": "luqy.luqe@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/JXForm.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "JXForm/Classes/**/*"
+}

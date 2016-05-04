@@ -7,8 +7,9 @@
 //
 
 #import "JXViewController.h"
+#import "JXForm.h"
 
-@interface JXViewController ()
+@interface JXViewController ()<JXFormDelegate,JXFormDataSource>
 
 @end
 
@@ -18,6 +19,43 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    JXForm* form=[[JXForm alloc] initWithFrame:self.view.bounds];
+    form.delegate=self;
+    form.dataSource=self;
+    [self.view addSubview:form];
+}
+
+-(NSInteger)numberOfRowsInForm:(JXForm *)form
+{
+    return 10;
+}
+-(NSInteger)numberOfColumnsInForm:(JXForm *)form
+{
+    return 10;
+}
+-(CGFloat)form:(JXForm *)form heightForRow:(NSInteger)row
+{
+    return 20;
+}
+-(CGFloat)form:(JXForm *)form widthForColumn:(NSInteger)column
+{
+    return 30;
+}
+-(CGFloat)paddingLeftForForm:(JXForm *)form
+{
+    return 10;
+}
+-(CGFloat)paddingTopForForm:(JXForm *)form
+{
+    return 20;
+}
+-(UIView*)form:(JXForm *)form contentViewForRow:(NSInteger)row column:(NSInteger)column
+{
+    UILabel* label=[[UILabel alloc] initWithFrame:CGRectMake(0, 0, 30, 20)];
+    label.textAlignment=NSTextAlignmentCenter;
+    label.font=[UIFont systemFontOfSize:6];
+    label.text=@"JXForm";
+    return label;
 }
 
 - (void)didReceiveMemoryWarning
