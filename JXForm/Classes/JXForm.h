@@ -41,4 +41,6 @@
 
 -(instancetype)initWithFrame:(CGRect)frame;
 
+-(UIView*)cellAtRow:(NSInteger)row column:(NSInteger)column;
+
 @end

@@ -5,14 +5,28 @@
 
 #import "JXForm.h"
 
+@interface JXForm ()
+
+@property (nonatomic,strong) NSMutableArray* cells;
+
+@end
+
 @implementation JXForm
 
 -(instancetype)initWithFrame:(CGRect)frame
 {
     if (self=[super initWithFrame:frame]) {
+        self.cells=[NSMutableArray new];
         self.backgroundColor=[UIColor whiteColor];
     }
     return self;
+}
+
+-(UIView*)cellAtRow:(NSInteger)row column:(NSInteger)column
+{
+    if(!self.delegate) return nil;
+    if(![self.delegate respondsToSelector:@selector(numberOfColumnsInForm:)]) return nil;
+    return self.cells[row*[self.delegate numberOfColumnsInForm:self]+column];
 }
 
 -(void)willMoveToSuperview:(UIView *)newSuperview
@@ -37,9 +51,11 @@
             }
             UIView* contentView=[self.dataSource form:self contentViewForRow:i column:j];
             CGRect frame=contentView.frame;
-            frame.origin=cellOrigin;
+            CGPoint contentViewOrigin=contentView.frame.origin;
+            frame.origin=CGPointMake(cellOrigin.x+contentViewOrigin.x, cellOrigin.y+contentViewOrigin.y);
             contentView.frame=frame;
             [self addSubview:contentView];
+            [self.cells addObject:contentView];
         }
         cellOrigin.x=formOrigin.x;
     }

@@ -23,6 +23,9 @@
     form.delegate=self;
     form.dataSource=self;
     [self.view addSubview:form];
+    UILabel* cell_1_2=(UILabel*)[form cellAtRow:1 column:2];
+    NSString* text=cell_1_2.text;
+    NSLog(@"%@",text);
 }
 
 -(NSInteger)numberOfRowsInForm:(JXForm *)form
@@ -54,7 +57,7 @@
     UILabel* label=[[UILabel alloc] initWithFrame:CGRectMake(0, 0, 30, 20)];
     label.textAlignment=NSTextAlignmentCenter;
     label.font=[UIFont systemFontOfSize:6];
-    label.text=@"JXForm";
+    label.text=[NSString stringWithFormat:@"[%ld,%ld]",(long)row,(long)column];
     return label;
 }
 
